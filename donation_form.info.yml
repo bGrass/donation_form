@@ -1,0 +1,5 @@
+name: Donation Form Module 
+description: Custom module providing a donation form (powered by Stripe) and associated niceties
+package: Custom
+type: module
+core: 8.x
