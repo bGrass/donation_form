@@ -1,5 +1,7 @@
-name: Donation Form Module 
+name: Donation Form 
 description: Custom module providing a donation form (powered by Stripe) and associated niceties
 package: Custom
 type: module
 core: 8.x
+dependencies:
+  - stripe_checkout
