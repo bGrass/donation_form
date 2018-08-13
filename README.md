@@ -43,6 +43,8 @@ But I simply ran out of time.
   This is my first time working with Atripe so my initial thought was 'hey look, theres a D8 contrib module called Stripe'.  It's not covered by Drupal’s security advisory policy though, which I'm not too comfortable with especially for handling users' credit card info.
 
   I then found this comparison chart https://drupalintegration.com/app/stripe which layed out the (somewhat limited) choices for D8.  stripe_checkout and commerce_stripe stood out as promising options.  They are both in beta and commerce_stripe has the edge in D8 installs.  commerce_stripe extends the commerce module, though, which doesn't feel like a great fit for this fairly straightforward use case.  stripe_checkout provides a special field type for submitting payments to Stripe that can be added to entities - seems simple and flexible.  
-
-
 ___
+### Outstanding tasks/todos:
+1. Users are required to have an account on the Drupal site in order to use Stripe (via stripe_checkout).  If an anonymous user initiates a donation they are taken to a form to create an account before being shown the Pay button - but the user experience is lacking as it's unclear to the user why that behavior is occurring.
+2. The user is shown a confirmation message when the Stripe payment is confirmed but the Pay button remains active, which is potentially confusing to user and could lead to them submitting a second donation, though they would need to reconfirm with Stripe to do so.
+3. I would have also like to add in a couple nice to have features and do additional testing of the deployment routine but I simple ran out of time for now.   
