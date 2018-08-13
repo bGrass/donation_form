@@ -1,0 +1,7 @@
+donation_form.main:
+  title: 'Donate'
+  description: 'Link to donation form'
+  parent: main
+  menu_name: main
+  url: internal:/node/add/donation
+  weight: 100
