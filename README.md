@@ -6,6 +6,7 @@ ___
 ## Installation:
 * Clone repo into local dev environment or server
 * Run 'composer install --ignore-platform-reqs' to install dependencies
+* Copy default.settings.php as settings.php and edit as appropriate
 * Enable the donation_form module and answer yes to installing dependencies
 ___
 # Development Documentation
@@ -34,22 +35,14 @@ Need to collect who is making the donation, how much it’s for and of course co
 2. Allow the user to select from a list of donation amounts or enter a custom value.
 3. Track the status of the transaction from Stripe in Drupal with a record of the donation.  A view might also be nice
 4. Realtime validation of inputs.
+But I simply ran out of time.
 
-##### Selected approaches
-1.
-2.
-3.
-4.
 ### Module selection
   There are a number of Stripe module for Drupal, I want to pick one that is stable, suits this use case well, and can be implemented fairly quickly.
 
   This is my first time working with Atripe so my initial thought was 'hey look, theres a D8 contrib module called Stripe'.  It's not covered by Drupal’s security advisory policy though, which I'm not too comfortable with especially for handling users' credit card info.
 
-  I then found this comparison chart https://drupalintegration.com/app/stripe which layed out the (somewhat limited) choices for D8.  stripe_checkout and commerce_stripe stood out as promising options.  They are both in beta and commerce_stripe has the edge in D8 installs.  commerce_stripe extends the commerce module, though, which doesn't feel like a great fit for this fairly straightforward use case.  stripe_checkout provides a special field type for submitting payments to Stripe that can be added to entities - seems simple and flexible.
-  
-  I found that I didn't need to do what the instructions said (run composer install in module root) - looks like adding the module via 'composer require drupal/stripe_checkout handled that.  It also followed the requirement to stripe-api and installed the stripe PHP library specified there (in composer.json).  This approach should meet installation requirement #1.
-  * composer require drupal/stripe_checkout --ignore-platform-reqs (this installed PHP library as well)
-  * 
+  I then found this comparison chart https://drupalintegration.com/app/stripe which layed out the (somewhat limited) choices for D8.  stripe_checkout and commerce_stripe stood out as promising options.  They are both in beta and commerce_stripe has the edge in D8 installs.  commerce_stripe extends the commerce module, though, which doesn't feel like a great fit for this fairly straightforward use case.  stripe_checkout provides a special field type for submitting payments to Stripe that can be added to entities - seems simple and flexible.  
 
 
 ___
