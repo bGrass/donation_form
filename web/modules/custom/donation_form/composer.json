@@ -1,0 +1,10 @@
+{
+  "name": "drupal/donation_form",
+  "type": "drupal-module",
+  "description": "Custom module for acception donations with Stripe",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal/stripe_checkout": "^2.0@beta",
+    "drupal/auto_entitylabel": "^2.1@beta"
+  }
+}
