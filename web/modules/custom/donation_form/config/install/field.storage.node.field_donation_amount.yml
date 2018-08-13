@@ -10,7 +10,7 @@ entity_type: node
 type: stripe_checkout
 settings:
   precision: '10'
-  scale: '2'
+  scale: '0'
   currency: usd
 module: stripe_checkout
 locked: false

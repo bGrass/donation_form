@@ -11,7 +11,7 @@ field_name: field_donation_amount
 entity_type: node
 bundle: donation
 label: 'Donation Amount'
-description: 'The amount you''d like to donate.'
+description: 'Please enter the amount you''d like to donate in US dollars.'
 required: true
 translatable: false
 default_value: {  }
