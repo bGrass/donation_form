@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - stripe_checkout
+id: node.field_donation_amount
+field_name: field_donation_amount
+entity_type: node
+type: stripe_checkout
+settings:
+  precision: '10'
+  scale: '2'
+  currency: usd
+module: stripe_checkout
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

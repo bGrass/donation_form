@@ -1,0 +1,45 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.donation.field_donation_amount
+    - field.field.node.donation.field_first_name
+    - field.field.node.donation.field_last_name
+    - node.type.donation
+  module:
+    - stripe_checkout
+    - user
+id: node.donation.default
+targetEntityType: node
+bundle: donation
+mode: default
+content:
+  field_donation_amount:
+    weight: 2
+    label: above
+    settings:
+      link_text: 'Purchase - $@price'
+      company_name: 'Company name'
+      free_text: 'Access for free'
+    third_party_settings: {  }
+    type: stripe_checkout_formatter
+    region: content
+  field_first_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_last_name:
+    weight: 1
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  body: true
+  links: true
